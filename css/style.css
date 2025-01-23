@@ -1,3 +1,9 @@
+:root {
+    --bg-primary: #26d48c;
+    --secondary: #007BFF;
+   
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -19,6 +25,13 @@
  }
 
 /*** Spinner End ***/
+.class {
+    top: 0;
+    bottom: 0;
+  
+}
+
+
 
 
 /*** Button Start ***/
@@ -139,6 +152,30 @@
 }
 
 /*** Navbar End ***/
+
+
+/*** Feature ***/
+.feature-item {
+    transition: .5s;
+}
+
+.feature-item:hover {
+    margin-top: -15px;
+}
+
+
+
+/*** About ***/
+.progress {
+    height: 5px;
+}
+
+.progress .progress-bar {
+    width: 0px;
+    transition: 3s;
+}
+
+
 
 
 
@@ -308,21 +345,42 @@
 
 
 
-.left-image {
-    max-width: 450px;
-    height: 350px;
-    margin-top: 50px;
-    border-radius: 15px;
-    border: 5px solid transparent; 
-    
-    border-image-slice: 1; /* Fills the border with the gradient */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 10px rgba(255, 255, 255, 0.5) inset; /* Outer and inner shadow */
-    border-radius: 15px; /* Rounded corners for a smooth effect */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Container for responsive image */
+.image-container {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    border-radius: 8px; /* Optional: For rounded corners */
+    max-width: 100%; /* Ensures the container is responsive */
 }
-.left-image:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 255, 255, 0.6) inset; /* Enhanced shadow on hover */
+
+/* The image itself */
+.image-container img {
+    width: 100%; /* Makes the image responsive */
+    height: auto;
+    transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
+}
+
+/* Zoom-in effect on hover */
+.image-container:hover img {
+    transform: scale(1.2); /* Scales the image by 20% */
+}
+@media (max-width: 768px) {
+    .image-container img {
+        transition: transform 0.5s ease-in-out; /* Slightly slower for smaller screens */
+    }
+    .image-container:hover img {
+        transform: scale(1.1); /* Less zoom for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title h1 {
+        font-size: 1.75rem; /* Adjust heading size for smaller screens */
+    }
+    video {
+        min-height: 200px; /* Reduce video size for mobile */
+    }
 }
 
 
@@ -545,6 +603,70 @@
     font-weight: 300;
     text-transform: uppercase;
 }
+/*** Project Portfolio ***/
+#portfolio-flters .btn {
+    position: relative;
+    display: inline-block;
+    margin: 10px 4px 0 4px;
+    transition: .5s;
+}
+
+#portfolio-flters .btn::after {
+    position: absolute;
+    content: "";
+    right: -1px;
+    bottom: -1px;
+    border-left: 20px solid transparent;
+    border-right: 0 solid transparent;
+    border-bottom: 50px solid #FFFFFF;
+}
+
+#portfolio-flters .btn:hover,
+#portfolio-flters .btn.active {
+    color: var(--light);
+    background: #2124B1;
+}
+.portfolio-overlay {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    top: 0;
+    left: 0;
+    background:  #4F84C4;
+    transition: .5s;
+    z-index: 1;
+    opacity: 0;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-item .btn {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/icon-shape-white.png) center center no-repeat;
+    border: none;
+    transition: .5s;
+    opacity: 0;
+    z-index: 2;
+}
+
+.portfolio-item:hover .btn {
+    opacity: 1;
+    transition-delay: .15s;
+}
+
 
   
   /* Footer Button */
@@ -751,14 +873,14 @@
 /*** Footer Start ***/
 
 .footer .short-link a,
-.footer .help-link a,
-.footer .contact-link a {
+.footer .help-link a
+{
     transition: .5s;
 }
 
 .footer .short-link a:hover,
-.footer .help-link a:hover,
-.footer .contact-link a:hover {
+.footer .help-link a:hover
+ {
     letter-spacing: 1px;
 }
 
@@ -766,6 +888,126 @@
     background: var(--bs-secondary);
     border: 0;
 }
+@media (max-width: 576px) {
+    .address-line {
+      font-size: 14px; /* Adjust size for mobile */
+    }
+  }
+  
+  @media (min-width: 577px) {
+    .address-line {
+      font-size: 16px; /* Adjust size for larger screens */
+    }
+  }
+  
 
+@media (max-width: 768px) {
+    .mb-2 {
+      margin-bottom: 1rem;
+    }
+    a {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    a {
+      font-size: 12px;
+    }
+  }
+  
 /*** Footer End ***/
 
+/*** Project Portfolio ***/
+#portfolio-flters li {
+    display: inline-block;
+    font-weight: 500;
+    color: var(--dark);
+    cursor: pointer;
+    transition: .5s;
+    border-bottom: 2px solid transparent;
+   
+        border-bottom: none; /* Remove underline */
+        text-decoration: none; /* Remove text decoration */
+        box-shadow: none; /* Remove any shadow effect */
+    }
+    
+
+
+#portfolio-flters li:hover,
+#portfolio-flters li.active {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.portfolio-item img {
+    transition: .5s;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-item .portfolio-overlay {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background:  rgba(3, 43, 243, 0.8);
+    transition: .5s;
+    opacity: 0;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+@media (max-width: 768px) {
+    .section-title h1 {
+        font-size: 1.8rem;
+    }
+
+    .d-flex.align-items-center .rounded-circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .d-flex.align-items-center h5 {
+        font-size: 1rem;
+    }
+
+    .form-control,
+    .form-select {
+        font-size: 0.9rem;
+        height: 45px;
+    }
+
+    .btn-dark {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title h1 {
+        font-size: 1.5rem;
+    }
+
+    .d-flex.align-items-center .rounded-circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .form-control,
+    .form-select {
+        font-size: 0.8rem;
+        height: 40px;
+    }
+
+    .btn-dark {
+        font-size: 0.8rem;
+    }
+}

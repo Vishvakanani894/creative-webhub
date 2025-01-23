@@ -103,7 +103,36 @@
         });
     });
 
+     //Portfolio isotope and filter
+     /*var portfolioIsotope = $('.portfolio-container').isotope({
+        itemSelector: '.portfolio-item',
+        layoutMode: 'fitRows'
+    });
+    $('#portfolio-flters li').on('click', function () {
+        $("#portfolio-flters li").removeClass('active');
+        $(this).addClass('active');
 
+        portfolioIsotope.isotope({filter: $(this).data('filter')});
+    });*/
+ 
+    $(document).ready(function () {
+        const $portfolioItems = $('.portfolio-item'); // Cache items
+    
+        $('#portfolio-flters li').on('click', function () {
+            $('#portfolio-flters li').removeClass('active'); // Remove active class
+            $(this).addClass('active'); // Add active class to clicked button
+    
+            const filterValue = $(this).data('filter'); // Get filter value
+    
+            if (filterValue === '*') {
+                $portfolioItems.show(); // Show all items instantly
+            } else {
+                $portfolioItems.hide(); // Hide all items
+                $portfolioItems.filter(filterValue).show(); // Show matching ones
+            }
+        });
+    });
+    
 
 })(jQuery);
 
