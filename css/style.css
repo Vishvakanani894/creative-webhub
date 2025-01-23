@@ -1011,3 +1011,28 @@
         font-size: 0.8rem;
     }
 }
+
+/* Hide buttons on mobile screens */
+@media (max-width: 768px) {
+    .carousel-content-btn1,
+    .carousel-content-btn2 {
+        display: none !important;
+    }
+    
+    /* Adjust content positioning when on smaller screens */
+    .carousel-caption {
+        position: absolute;
+        top: 40%; /* Adjust this value as needed */
+        transform: translateY(-40%);
+    }
+    
+    /* Optional: Adjust text size for better readability on mobile */
+    .carousel-content h1 {
+        font-size: 2rem; /* Adjust font size */
+    }
+    
+    .carousel-content p {
+        font-size: 1rem; /* Adjust font size */
+    }
+}
+
