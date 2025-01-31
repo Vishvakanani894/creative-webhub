@@ -101,11 +101,24 @@
 
 
 /*** Navbar Start ***/
+
+
+
 .mynav{
     position: fixed;
     top: 0;
     z-index: 50;
 }
+.logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 350px; /* Adjust logo size as needed */
+    height: auto;
+  }
+  
 .navbar .navbar-nav {
     padding: 15px 0;
 }
@@ -132,17 +145,6 @@
     margin-left: 8px;
 }
 
-@media (min-width: 992px) {
-    .navbar .nav-item .dropdown-menu {
-        display: block;
-        visibility: hidden;
-        top: 100%;
-        transform: rotateX(-75deg);
-        transform-origin: 0% 0%;
-        transition: .5s;
-        opacity: 0;
-    }
-}
 
 .navbar .nav-item:hover .dropdown-menu {
     transform: rotateX(0deg);
@@ -150,6 +152,22 @@
     transition: .5s;
     opacity: 1;
 }
+/* Basic styling for the dropdown links */
+.dropdown-item {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.3s, color 0.3s; /* Add smooth transition for hover effect */
+}
+
+/* Change the background color and text color when hovering */
+
+.dropdown-item:hover,
+.dropdown-item.active {
+    color:#26d48c;
+}
+
+
 
 /*** Navbar End ***/
 
@@ -404,7 +422,7 @@
     top: 0;
     left: 0;
     border-radius: 10px 10px 0 0;
-    background: rgba(3, 43, 243, 0.8);
+    background: rgba(74, 98, 218, 0.8);
     transition: .5s;
 }
 
@@ -791,19 +809,19 @@
 }
 
 .contact-map {
-    background: #26d48c;
+    background:#0056b3;
 }
 
 .contact-form {
-    background: #26d48c;
+    background:#0056b3;
 }
 .button-container {
     text-align: center;
   }
   
   .send-button {
-    background-color: rgba(3, 43, 243, 0.8);
-    color: white;
+    background-color:#26d48c;
+    color: black;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -813,7 +831,8 @@
   }
   
   .send-button:hover {
-    background-color: rgba(3, 43, 243, 0.8);
+    background-color:white;
+    color: #000000;
   }
   
   .send-button:active {
@@ -927,18 +946,19 @@
     cursor: pointer;
     transition: .5s;
     border-bottom: 2px solid transparent;
-   
-        border-bottom: none; /* Remove underline */
-        text-decoration: none; /* Remove text decoration */
-        box-shadow: none; /* Remove any shadow effect */
+   border-bottom: none; /* Remove underline */
+   text-decoration: none; /* Remove text decoration */
+   box-shadow: none; /* Remove any shadow effect */
     }
-    
-
+.data-filters li {
+    color: #f2f2f2;
+}
 
 #portfolio-flters li:hover,
 #portfolio-flters li.active {
     color: var(--primary);
     border-color: var(--primary);
+    
 }
 
 .portfolio-item img {
@@ -958,7 +978,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background:  rgba(3, 43, 243, 0.8);
+    background:  rgba(74, 98, 218, 0.8);;
     transition: .5s;
     opacity: 0;
 }
@@ -1035,4 +1055,6 @@
         font-size: 1rem; /* Adjust font size */
     }
 }
+
+
 

@@ -37,17 +37,18 @@
         <!-- Spinner End -->
 
       
-
-        <!-- Navbar Start -->
- <div class="container-fluid bg-primary mynav">
+<!-- Navbar Start -->
+<div class="container-fluid bg-primary mynav">
     <div class="container">
         <nav class="navbar navbar-dark navbar-expand-lg py-0">
-            <a href="index.html" class="navbar-brand">
-                <h1 class="text-white fw-bold d-block">Creative <span class="text-secondary">Webhub</span> </h1>
+            <a href="index.html" class="logo-container">
+                <img src="img/logo10.png" alt="Creative Webhub" class="logo img-fluid" style="width: 300px;">
+
             </a>
-            <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            
             <div class="collapse navbar-collapse bg-transparent" id="navbarCollapse">
                 <div class="navbar-nav ms-auto mx-xl-auto p-0">
                     <a href="index.html" class="nav-item nav-link active text-secondary">Home</a>
@@ -69,7 +70,7 @@
             </div>
             <div class="d-none d-xl-flex flex-shirink-0">
                 <div id="phone-tada" class="d-flex align-items-center justify-content-center me-4">
-                    
+                </div>  
                 
             </div>
         </nav>
@@ -78,8 +79,8 @@
 <!-- Navbar End -->
 
 
-        
-        <!-- Page Header Start -->
+
+<!-- Page Header Start -->
         <div class="container-fluid page-header py-5">
             <div class="container text-center py-5">
                 <h1 class="display-2 text-white mb-4 animated slideInDown">Pay Per Click</h1>
@@ -92,11 +93,11 @@
                 </nav>
             </div>
         </div>
-        <!-- Page Header End -->
+<!-- Page Header End -->
 
         
         
-         <!-- About Start -->
+<!-- About Start -->
     <div class="container-fluid py-0 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
@@ -140,10 +141,10 @@
             </div>
         </div>
     </div>
-    <!-- About End -->
+<!-- About End -->
     
 
-           <!-- About Start -->
+<!-- About Start -->
 <div class="container-fluid py-0">
     <div class="container py-5">
         <div class="row g-5 align-items-center">
@@ -173,14 +174,7 @@
 <!-- About End -->
          
     
-
-
-        
-
-
-   
-        
-       <!-- Quotes start -->
+<!-- Quotes start -->
 
 <div class="container-fluid py-0 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container py-5">
@@ -211,16 +205,21 @@
             <!-- Form Section -->
             <div class="col-lg-5 col-md-12 wow fadeIn" data-wow-delay="0.5s">
                 <div class="bg-primary rounded h-100 p-4 d-flex align-items-center">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="da4a61da-e0bd-4daa-b291-b86bf72c0e5b">
                     <form class="w-100">
                         <div class="row g-3">
                             <div class="col-12">
-                                <input type="text" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;">
+                                <input type="text" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;" name="name">
                             </div>
                             <div class="col-12">
-                                <input type="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;">
+                                <input type="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;" name="email">
                             </div>
                             <div class="col-12">
-                                <select class="form-select bg-light border-0" style="height: 55px;">
+                                <input type="tel" class="form-control bg-light border-0" placeholder="Enter number" style="height: 55px;" name="phone" required pattern="^\d{10}$">
+                            </div>
+                            <div class="col-12">
+                                <select class="form-select bg-light border-0" style="height: 55px;" name="service">
                                     <option selected>Select A Service</option>
                                     <option value="1">Web Designing</option>
                                     <option value="2">Web Development</option>
@@ -231,7 +230,7 @@
                                 </select>
                             </div>
                             <div class="col-12">
-                                <textarea class="form-control bg-light border-0" rows="3" placeholder="Message"></textarea>
+                                <textarea class="form-control bg-light border-0" rows="3" placeholder="Message" name="message"></textarea>
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-dark w-100 py-3" type="submit">Contact Us</button>
@@ -248,8 +247,7 @@
 
       
 
-
-        <!-- Footer Start -->
+<!-- Footer Start -->
          <div class="container-fluid footer bg-dark wow fadeIn" data-wow-delay=".3s">
             <div class="container pt-5 pb-4">
                 <div class="row g-5">
@@ -285,9 +283,9 @@
                     <div class="col-lg-3 col-md-6">
                         <a href="#" class="h3 text-secondary">Contact Us</a>
                         <div class="text-white mt-4 d-flex flex-column contact-link">
-                            <a href="about.html" class="mb-2 text-white"><i class="fas fa-map-marker-alt text-secondary me-2"></i> No-7, Dwarkesh Chamber, Dudhwala Mohalla, Ghadiyali Pole, Nizampura, Vadodara, Gujarat, India <br> <span class="d-block d-sm-inline">390024</span></a>
-                            <a href="about.html" class="mb-2 text-white"><i class="fas fa-phone-alt text-secondary me-2"></i>  097250 92497</a>
-                            <a href="about.html" class="mb-2 text-white"><i class="fas fa-envelope text-secondary me-2"></i> info@creativewebhub.con</a>
+                            <a href="#" class="mb-2 text-white"><i class="fas fa-map-marker-alt text-secondary me-2"></i> No-7, Dwarkesh Chamber, Dudhwala Mohalla, Ghadiyali Pole, Nizampura, Vadodara, Gujarat, India <br> <span class="d-block d-sm-inline">390024</span></a>
+                            <a href="tel:09725092497" class="mb-2 text-white"><i class="fas fa-phone-alt text-secondary me-2"></i>  097250 92497</a>
+                            <a href="#" class="mb-2 text-white"><i class="fas fa-envelope text-secondary me-2"></i> info@creativewebhub.com</a>
                         </div>
                     </div>
                 </div>
@@ -300,7 +298,7 @@
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
+<!-- Footer End -->
 
 
         <!-- Back to Top -->
