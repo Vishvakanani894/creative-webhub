@@ -79,6 +79,64 @@
     bottom: 30px;
     z-index: 99;
 }
+.calling {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 25px;
+    bottom: 90px;
+    z-index: 99;
+    background-color:#26d48c; /* Button color */
+    color: white; /* Icon color */
+    border-radius: 50%; /* Make it round */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    transition: transform 0.3s ease; /* Smooth zoom in/out transition */
+}
+
+/* Zoom effect on hover */
+.calling:hover {
+    transform: scale(1.3); /* Zoom in by 30% */
+    background-color: #495057; /* Change background color on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow for better hover effect */
+}
+
+/* Optional: Zoom effect when clicked (active state) */
+.calling:active {
+    transform: scale(1); /* Reset scale when clicked */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slight shadow on click */
+}
+.whatsapp {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 25px;
+    bottom: 150px;
+    z-index: 99;
+    background-color:#26d48c; /* Button color */
+    color: white; /* Icon color */
+    border-radius: 50%; /* Make it round */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    transition: transform 0.3s ease; /* Smooth zoom in/out transition */
+}
+
+/* Zoom effect on hover */
+.whatsapp:hover {
+    transform: scale(1.3); /* Zoom in by 30% */
+    background-color: #495057; /* Change background color on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow for better hover effect */
+}
+
+/* Optional: Zoom effect when clicked (active state) */
+.whatsapp:active {
+    transform: scale(1); /* Reset scale when clicked */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slight shadow on click */
+}
 
 /*** Button End ***/
 
@@ -1056,5 +1114,109 @@
     }
 }
 
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: auto;
+}
+
+.slider {
+  display: flex;
+  gap: 100px;
+  animation: scroll 10s linear infinite;
+}
+
+.slider img {
+  width: 90px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Default animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive speed adjustments */
+@media (max-width: 992px) {
+    .slider {
+      animation-duration: 8s; /* Faster speed for medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .slider {
+      animation-duration: 6s; /* Even faster for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .slider {
+      animation-duration: 5s; /* Fastest speed for very small screens */
+    }
+  }
+  
+
+  /* Clone logos to make seamless */
+  .slider::after {
+    content: "";
+    display: inline-flex;
+  }
+  h1 {
+    text-align: center;
+  }
+  
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 50px;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    height: 120%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card img {
+    width: 50px;
+}
 
 
+.card h3 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.card p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.left-align {
+    text-align: left;
+}
